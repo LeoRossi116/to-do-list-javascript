@@ -33,13 +33,13 @@ function update_list() {
 
       const checkbox = document.createElement("input")
       checkbox.type = "checkbox"
-      checkbox.checked = t.done   // assuming your task objects have a `done` field
+      checkbox.checked = t.done  
 
       const label = document.createElement("label")
-      label.append(t.content, " ", checkbox)   // append accepts nodes and strings
+      label.append(t.content, " ", checkbox)  
 
       checkbox.addEventListener("change", () => {
-        change_state(t.id, checkbox.checked)   // you'll need a function like this in task_manager
+        change_state(t.id, checkbox.checked)  
         update_counter()
       })
 
